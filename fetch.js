@@ -451,7 +451,7 @@
         xhr.withCredentials = false
       }
 
-      if ('responseType' in xhr && support.blob) {
+      if (init.method !== 'HEAD' && 'responseType' in xhr && support.blob) {
         xhr.responseType = 'blob'
       }
 
